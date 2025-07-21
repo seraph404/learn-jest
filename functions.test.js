@@ -25,5 +25,5 @@ test("divides 10 by 5 to equal 2", () => {
 const { caesarCipher } = require("./functions");
 
 test("shifts the string 'abc' to be 'def'", () => {
-  expect(caesarCipher("abc")).toBe("def");
+  expect(caesarCipher("abc", 3)).toBe("def");
 });

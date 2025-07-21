@@ -19,7 +19,7 @@ const calculator = {
   },
 };
 
-function caesarCipher(string) {
+function caesarCipher(string, shift) {
   const ALPHABET = [
     "a",
     "b",
@@ -48,20 +48,18 @@ function caesarCipher(string) {
     "y",
     "z",
   ];
-  SHIFT = 3;
   const stringArr = string.split("");
   const newArr = [];
   stringArr.forEach((letter) => {
     // find the index of the letter in the alphabet
     const index = ALPHABET.indexOf(letter);
     // increment the index by SHIFT
-    const newIndex = index + SHIFT;
+    const newIndex = index + shift;
     newArr.push(ALPHABET[newIndex]);
   });
   return newArr.join("");
 }
 
-caesarCipher("abc");
 module.exports = {
   capitalize,
   calculator,
