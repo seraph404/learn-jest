@@ -81,7 +81,11 @@ function caesarCipher(string, shift) {
     const index = ALPHABET.indexOf(letter);
     // increment the index by SHIFT
     const newIndex = index + shift;
-    newArr.push(ALPHABET[newIndex]);
+    if (index === -1) {
+      newArr.push(letter);
+    } else {
+      newArr.push(ALPHABET[newIndex]);
+    }
   });
   return newArr.join("");
 }
