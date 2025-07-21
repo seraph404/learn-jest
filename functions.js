@@ -77,9 +77,7 @@ function caesarCipher(string, shift) {
   const stringArr = string.split("");
   const newArr = [];
   stringArr.forEach((letter) => {
-    // find the index of the letter in the alphabet
     const index = ALPHABET.indexOf(letter);
-    // increment the index by SHIFT
     const newIndex = index + shift;
     if (index === -1) {
       newArr.push(letter);
@@ -90,8 +88,28 @@ function caesarCipher(string, shift) {
   return newArr.join("");
 }
 
+function analyzeArray(arr) {
+  const object = {
+    average: "",
+    min: "",
+    max: "",
+    length: "",
+  };
+  // calculate the average
+  const total = arr.reduce((acc, item) => {
+    acc += item;
+    return acc;
+  }, 0);
+  object.average = total / arr.length;
+  console.log(object);
+  return object;
+}
+
+analyzeArray([1, 8, 3, 4, 2, 6]);
+
 module.exports = {
   capitalize,
   calculator,
   caesarCipher,
+  analyzeArray,
 };
