@@ -27,3 +27,7 @@ const { caesarCipher } = require("./functions");
 test("shifts the string 'abc' to be 'def'", () => {
   expect(caesarCipher("abc", 3)).toBe("def");
 });
+
+test("shifted letter casing should follow original", () => {
+  expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
+});
