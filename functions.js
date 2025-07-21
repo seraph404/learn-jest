@@ -4,4 +4,22 @@ function capitalize(string) {
   return firstLetter + remainingLetters;
 }
 
-module.exports = capitalize;
+const calculator = {
+  sum(a, b) {
+    return a + b;
+  },
+  difference(a, b) {
+    return a - b;
+  },
+  product(a, b) {
+    return a * b;
+  },
+  quotient(a, b) {
+    return a / b;
+  },
+};
+
+module.exports = {
+  capitalize,
+  calculator,
+};

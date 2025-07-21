@@ -1,8 +1,10 @@
-const capitalize = require("./functions");
+const { capitalize } = require("./functions");
 
 test("capitalizes the first character of a string", () => {
   expect(capitalize("cat")).toBe("Cat");
 });
+
+const { calculator } = require("./functions");
 
 test("adds 1 + 2 to equal 3", () => {
   expect(calculator.sum(1, 2)).toBe(3);
