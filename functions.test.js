@@ -35,3 +35,10 @@ test("shifted letter casing should follow original", () => {
 test("non-alphabetical characters should remain unchanged", () => {
   expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
 });
+
+const { analyzeArray } = require("./functions");
+
+test("calculates the average of the array", () => {
+  const result = analyzeArray([1, 8, 3, 4, 2, 6]);
+  expect(result.average).toBe(4);
+});
