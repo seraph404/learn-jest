@@ -101,6 +101,26 @@ function analyzeArray(arr) {
     return acc;
   }, 0);
   object.average = total / arr.length;
+  // find the min
+  const min = arr.reduce((acc, item) => {
+    if (acc < item) {
+      return acc;
+    } else {
+      return item;
+    }
+  });
+  object.min = min;
+  // find the max
+  const max = arr.reduce((acc, item) => {
+    if (acc > item) {
+      return acc;
+    } else {
+      return item;
+    }
+  });
+  object.max = max;
+  // find the length
+  object.length = arr.length;
   console.log(object);
   return object;
 }
