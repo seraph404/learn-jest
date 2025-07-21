@@ -21,3 +21,9 @@ test("multiplies 5 * 2 to equal 10", () => {
 test("divides 10 by 5 to equal 2", () => {
   expect(calculator.quotient(10, 5)).toBe(2);
 });
+
+const { caesarCipher } = require("./functions");
+
+test("shifts the string 'abc' to be 'def'", () => {
+  expect(caesarCipher("abc")).toBe("def");
+});
