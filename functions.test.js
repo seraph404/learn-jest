@@ -31,3 +31,7 @@ test("shifts the string 'abc' to be 'def'", () => {
 test("shifted letter casing should follow original", () => {
   expect(caesarCipher("HeLLo", 3)).toBe("KhOOr");
 });
+
+test("non-alphabetical characters should remain unchanged", () => {
+  expect(caesarCipher("Hello, World!", 3)).toBe("Khoor, Zruog!");
+});
